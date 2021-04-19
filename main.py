@@ -10,6 +10,10 @@ app = Flask('app')
 def index():
     return render_template("index.html")
 
+@app.route('/misc')
+def misc():
+    return render_template("misc.html")
+
 @app.route('/favicon.ico')
 def favicon():
     return app.send_static_file('./favicon.ico')
